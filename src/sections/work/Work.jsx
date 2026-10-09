@@ -2,7 +2,7 @@ import { projects } from "../../data/projects";
 import ScrollReveal from "../../components/common/ScrollReveal";
 import ProjectCard from "./ProjectCard";
 
-export default function Work({ darkMode }) {
+export default function Work() {
   return (
     <section
       id="work"
@@ -10,37 +10,36 @@ export default function Work({ darkMode }) {
         mx-auto
         max-w-[1180px]
         px-5
-        pt-12
+        py-12
         lg:px-0
-        lg:pt-20
+        lg:py-20
       "
     >
       <ScrollReveal>
         <h2
           className="
-            mb-3
-            text-[16px]
-            font-bold
+            mb-8
+            text-[40px]
+            font-extrabold
+            leading-none
+            tracking-[-1.5px]
+            text-[#101828]
             dark:text-white
-            lg:text-[18px]
+            lg:text-4xl
           "
         >
-          Work
+          Projects
         </h2>
       </ScrollReveal>
 
-      <div className="space-y-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:gap-9">
         {projects.map((project, index) => (
           <ScrollReveal
             key={project.id}
             direction={index % 2 === 0 ? "left" : "right"}
-            delay={index * 100}
+            delay={(index % 2) * 120}
           >
-            <ProjectCard
-              project={project}
-              index={index}
-              darkMode={darkMode}
-            />
+            <ProjectCard project={project} />
           </ScrollReveal>
         ))}
       </div>

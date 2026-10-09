@@ -1,41 +1,37 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Button from "../../components/common/Button";
 
-export default function ProjectCard({
-  project,
-  index,
-  darkMode,
-}) {
-  const theme = darkMode
-    ? project.theme.dark
-    : project.theme.light;
-
+export default function ProjectCard({ project }) {
   return (
     <article
       className="
         group
-        grid
-        gap-4
+        flex
+        h-full
+        flex-col
         overflow-hidden
-        rounded-[20px]
-        p-4
+        rounded-2xl
+        bg-[#FFD3E0]
+        p-2
         transition-all
-        duration-700
+        duration-500
         hover:-translate-y-2
         hover:shadow-2xl
-        lg:grid-cols-[1.1fr_0.9fr]
-        lg:p-5
+        dark:bg-[#3A1F2B]
+        lg:rounded-4xl
+        lg:p-4
       "
-      style={{
-        backgroundColor: theme.background,
-      }}
     >
       {/* IMAGE */}
       <div
         className="
           group/image
+          aspect-[1.4/1]
+          w-full
           overflow-hidden
-          rounded-[9px]
+          rounded-2xl
           bg-white
+          lg:rounded-[24px]
         "
       >
         <img
@@ -46,46 +42,24 @@ export default function ProjectCard({
             h-full
             w-full
             object-cover
+            object-top
             transition-transform
             duration-1000
             ease-out
-            group-hover/image:scale-110
+            group-hover/image:scale-105
           "
         />
       </div>
 
       {/* CONTENT */}
-      <div
-        className="
-          flex
-          flex-col
-          justify-center
-          py-3
-          lg:pr-5
-        "
-        style={{
-          color: theme.accent,
-        }}
-      >
-        <span
-          className="
-            mb-2
-            font-mono
-            text-[11px]
-            opacity-60
-          "
-        >
-          0{index + 1}
-        </span>
-
+      <div className="mt-5 flex flex-1 flex-col">
         <h3
           className="
-            text-[19px]
-            font-bold
-            transition-transform
-            duration-500
-            group-hover:translate-x-2
-            lg:text-[24px]
+            text-sm
+            font-extrabold
+            text-[#101828]
+            dark:text-white
+            lg:text-xl
           "
         >
           {project.title}
@@ -93,66 +67,21 @@ export default function ProjectCard({
 
         <p
           className="
-            mt-2
-            text-[13px]
-            leading-[1.6]
-            lg:text-[14px]
-          "
-        >
+            text-sm
+            text-gray-600
+            dark:text-gray-300
+            lg:text-sm
+            "
+            >
           {project.description}
         </p>
 
-        <ul
-          className="
-            mt-3
-            space-y-1.5
-            text-[12px]
-            leading-[1.6]
-            lg:text-[13px]
-          "
-        >
-          {project.items.map((item, itemIndex) => (
-            <li
-              key={item}
-              className="
-                transition-transform
-                duration-300
-                hover:translate-x-2
-              "
-              style={{
-                transitionDelay: `${itemIndex * 30}ms`,
-              }}
-            >
-              • {item}
-            </li>
-          ))}
-        </ul>
-
-        <a
-          href={project.href || "#"}
-          className="
-            group/link
-            mt-5
-            flex
-            w-fit
-            items-center
-            gap-1
-            text-[13px]
-            font-semibold
-          "
-        >
-          View Project
-
-          <ArrowUpRight
-            size={13}
-            className="
-              transition-all
-              duration-300
-              group-hover/link:translate-x-1
-              group-hover/link:-translate-y-1
-            "
-          />
-        </a>
+        {/* garis pemisah + link */}
+        <div className="">
+          <div className="border-t-2 border-[#FF9FBF] dark:border-pink-400/40">
+            <Button href="#" variant="link" size="md" arrow>See details</Button>
+          </div>
+        </div>
       </div>
     </article>
   );
