@@ -8,11 +8,9 @@ export default function Work() {
       id="work"
       className="
         mx-auto
-        max-w-[1180px]
         px-5
         py-12
-        lg:px-0
-        lg:py-20
+        lg:px-20
       "
     >
       <ScrollReveal>

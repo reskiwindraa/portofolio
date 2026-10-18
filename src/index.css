@@ -105,3 +105,11 @@ select {
     animation: none;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  body a,
+  body button {
+    cursor: none;
+  }
+}

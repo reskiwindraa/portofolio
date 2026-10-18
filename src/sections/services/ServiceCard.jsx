@@ -6,13 +6,9 @@ export default function ServiceCard({ service }) {
       className="
         group min-h-[270px]
         h-full
-        rounded-3xl
-        border border-[#FFD6E0]
+        border-r border-l border-[#FFD6E0]
         p-6
         transition-all duration-500
-        hover:-translate-y-3
-        hover:scale-[1.02]
-        hover:shadow-2xl
        
       "
     >
@@ -20,11 +16,11 @@ export default function ServiceCard({ service }) {
         {service.number}
       </span>
 
-      <div className="mt-3 flex h-[70px] items-center">
-        <Icon
-          size={58}
-          strokeWidth={1.5}
-          className="text-blue-400"
+      <div className="mt-3 flex items-center">
+        <img
+          src={service.icon}
+          alt={`${service.title} icon`}
+          className="h-10 w-10 object-contain"
         />
       </div>
 
@@ -32,11 +28,7 @@ export default function ServiceCard({ service }) {
         {service.title}
       </h3>
 
-      <p className="mt-2 text-sm font-medium leading-[1.5] text-gray-950 dark:text-white lg:text-lg">
-        {service.description}
-      </p>
-
-      <p className="mt-2 text-sm ading-[1.6] text-neutral-500 text-gray-950 dark:text-neutral-300">
+      <p className="mt-2 text-md font-light text-neutral-500 text-gray-950 dark:text-neutral-300">
         {service.detail}
       </p>
     </article>

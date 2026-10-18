@@ -108,7 +108,7 @@ export default function Hero() {
 
   return (
     <section
-      id="home"
+      id="top"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setCursorVisible(true)}
       onMouseLeave={() => setCursorVisible(false)}
@@ -163,7 +163,7 @@ export default function Hero() {
 
         {/* Liquid besar kanan bawah */}
         <motion.div
-          className="absolute -right-28 -bottom-24 h-[380px] w-[420px] bg-gradient-to-br from-white via-pink-200 to-fuchsia-600 opacity-60 shadow-[inset_-22px_-24px_40px_rgba(157,23,77,0.26),inset_12px_12px_30px_rgba(255,255,255,0.88),0_30px_70px_rgba(236,72,153,0.22)]"
+          className="absolute -right-28 -bottom-1 h-[380px] w-[420px] bg-gradient-to-br from-white via-pink-200 to-fuchsia-600 opacity-80 shadow-2xs "
           animate={{
             borderRadius: [
               "42% 58% 35% 65% / 48% 42% 58% 52%",
@@ -172,8 +172,8 @@ export default function Hero() {
               "42% 58% 35% 65% / 48% 42% 58% 52%",
             ],
             rotate: [0, -10, 7, 0],
-            x: [0, -18, -4, 0],
-            y: [0, -14, -24, 0],
+            x: [0, -20, -4, 0],
+            y: [0, -14, -2, 0],
           }}
           transition={{
             duration: 14,
@@ -227,11 +227,11 @@ export default function Hero() {
         {/* Right: text and social links */}
         <ScrollReveal direction="right" delay={200}>
           <div className="flex flex-col">
-            <h1 className="text-[40px] font-extrabold leading-[1.15] tracking-[-1.5px] text-[#101828] transition-colors duration-500 dark:text-white md:text-[56px] lg:text-[64px]">
+            <h1 className="text-[40px] font-extrabold leading-[1.15] tracking-[-1.5px] text-gray-950 transition-colors duration-500 dark:text-white md:text-md lg:text-6xl">
               Reski Windradiaksa
             </h1>
-            <h2 className="mt-6 max-w-[760px] text-[40px] font-extrabold leading-[1.2] tracking-[-1.5px] text-[#101828] transition-colors duration-500 dark:text-white md:text-[56px] lg:text-[64px]">
-              Good design should feel simple.
+            <h2 className="mt-6  text-[40px] font-extrabold leading-[1.2] tracking-[-1.5px] text-pink-300 transition-colors duration-500 dark:text-pink-300 md:text-md lg:text-6xl">
+              Good design should feel simple✌️
             </h2>
             <p className="mt-8 max-w-[680px] text-[16px] leading-[1.6] text-[#101828] dark:text-gray-300 md:text-[18px]">
               UI/UX Designer and Frontend Developer with 2 years of experience

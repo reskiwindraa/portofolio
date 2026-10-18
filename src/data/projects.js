@@ -23,16 +23,7 @@ export const projects = [
       },
     },
 
-    items: [
-      "Color tokens",
-      "Typography",
-      "Buttons & components",
-      "Input states",
-      "Spacing system",
-      "Design guidelines",
-    ],
-
-    href: "#",
+    href: "/project-ongoing",
   },
 
   {
@@ -53,16 +44,7 @@ export const projects = [
       },
     },
 
-    items: [
-      "Customer rating flow",
-      "CS / Teller / Security assessment",
-      "Branch management",
-      "Staff schedule integration",
-      "Feedback & suggestions",
-      "Analytics dashboard",
-    ],
-
-    href: "#",
+    href: "/project-ongoing",
   },
 
   {
@@ -83,16 +65,7 @@ export const projects = [
       },
     },
 
-    items: [
-      "Color tokens",
-      "Typography",
-      "Buttons & components",
-      "Input states",
-      "Spacing system",
-      "Design guidelines",
-    ],
-
-    href: "#",
+    href: "/project-ongoing",
   },
 
   {
@@ -114,21 +87,12 @@ export const projects = [
       },
     },
 
-    items: [
-      "Customer rating flow",
-      "CS / Teller / Security assessment",
-      "Branch management",
-      "Staff schedule integration",
-      "Feedback & suggestions",
-      "Analytics dashboard",
-    ],
-
-    href: "#",
+    href: "/project-ongoing",
   },
 
   {
     id: "backoffice-sapa",
-    title: "BSB SAPA",
+    title: "Backoffice BSB SAPA",
     description:
       "A digital customer satisfaction platform designed to collect and manage feedback across branch services.",
     image: backofficeSapa,
@@ -145,16 +109,7 @@ export const projects = [
       },
     },
 
-    items: [
-      "Customer rating flow",
-      "CS / Teller / Security assessment",
-      "Branch management",
-      "Staff schedule integration",
-      "Feedback & suggestions",
-      "Analytics dashboard",
-    ],
-
-    href: "#",
+    href: "/project-ongoing",
   },
 
   

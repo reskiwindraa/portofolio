@@ -1,11 +1,17 @@
-import { ArrowRight } from "lucide-react";
-import Button from "../../components/common/Button";
+
+import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   return (
-    <article
+    <section id="projects">
+    <a
+      href="/project-ongoing"
+      target={project.link ? "_blank" : undefined}
+      rel={project.link ? "noopener noreferrer" : undefined}
+      aria-label={`Lihat project ${project.title}`}
       className="
         group
+        relative
         flex
         h-full
         flex-col
@@ -17,6 +23,9 @@ export default function ProjectCard({ project }) {
         duration-500
         hover:-translate-y-2
         hover:shadow-2xl
+        focus-visible:outline-2
+        focus-visible:outline-offset-4
+        focus-visible:outline-pink-400
         dark:bg-[#3A1F2B]
         lg:rounded-4xl
         lg:p-4
@@ -25,7 +34,7 @@ export default function ProjectCard({ project }) {
       {/* IMAGE */}
       <div
         className="
-          group/image
+          relative
           aspect-[1.4/1]
           w-full
           overflow-hidden
@@ -44,11 +53,26 @@ export default function ProjectCard({ project }) {
             object-cover
             object-top
             transition-transform
-            duration-1000
+            duration-700
             ease-out
-            group-hover/image:scale-105
+            group-hover:scale-105
           "
         />
+
+        {/* OVERLAY */}
+        <div
+          className="
+            absolute
+            inset-0
+            opacity-0
+            transition-opacity
+            duration-500
+            group-hover:opacity-100
+            group-focus-visible:opacity-100
+          "
+        />
+
+        {/* ARROW BUTTON */}
       </div>
 
       {/* CONTENT */}
@@ -57,8 +81,11 @@ export default function ProjectCard({ project }) {
           className="
             text-sm
             font-extrabold
-            text-[#101828]
-            dark:text-white
+            text-pink-400
+            transition-colors
+            duration-300
+            group-hover:text-pink-500
+            dark:text-pink-300
             lg:text-xl
           "
         >
@@ -67,24 +94,18 @@ export default function ProjectCard({ project }) {
 
         <p
           className="
+            mt-1
             text-sm
-            text-gray-600
+            leading-relaxed
+            text-neutral-500
             dark:text-gray-300
-            lg:text-sm
-            "
+            lg:text-base
+          "
         >
           {project.description}
         </p>
-
-        {/* garis pemisah + link */}
-        <div className="">
-          <div className="border-t-2 border-[#FFD6E0] dark:border-pink-400/40">
-            <Button href="#" variant="link" size="md" arrow>
-              See details
-            </Button>
-          </div>
-        </div>
       </div>
-    </article>
-  );
+    </a>
+  </section>
+);
 }
