@@ -97,14 +97,14 @@ export default function About() {
             </h2>
 
             <Button
-              href="/assets/resume.pdf"
-              variant="pink"
-              size="sm"
-              arrow
-              download="Resume-Reski-Windradiaksa.pdf"
-            >
-              See my resume
-            </Button>
+  href="/assets/resume.pdf"
+  variant="pink"
+  size="sm"
+  arrow
+  download="Resume-Reski-Windradiaks a.pdf"
+>
+  See my resume
+</Button>
           </div>
         </ScrollReveal>
 
