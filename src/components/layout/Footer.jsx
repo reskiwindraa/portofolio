@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import profileImage from "../assets/profile.png";
-import ScrollReveal from "../components/common/ScrollReveal";
+import profileImage from "../../assets/profile.png";
+import ScrollReveal from "../common/ScrollReveal";
 
 const socialLinks = [
   {

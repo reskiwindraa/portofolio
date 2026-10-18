@@ -1,6 +1,12 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Geist", sans-serif;
+}
 
 :root {
   font-family: "Geist", sans-serif;
@@ -22,6 +28,7 @@ body {
   margin: 0;
   min-width: 320px;
   background: #ffffff;
+  font-family: "Geist", sans-serif;
   transition: background-color 300ms ease;
 }
 
@@ -36,10 +43,65 @@ html.dark body {
 button,
 a,
 input,
-textarea {
+textarea,
+select {
   font-family: inherit;
 }
 
 ::selection {
   background: #ccefe6;
+}
+
+/* Floating 3D spheres */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -24px, 0);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+@keyframes float-diagonal {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(14px, -18px, 0);
+  }
+}
+
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.float-reverse {
+  animation: float-reverse 8s ease-in-out infinite;
+}
+
+.float-diagonal {
+  animation: float-diagonal 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow,
+  .float-reverse,
+  .float-diagonal {
+    animation: none;
+  }
 }

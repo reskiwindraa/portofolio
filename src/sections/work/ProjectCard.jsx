@@ -11,7 +11,7 @@ export default function ProjectCard({ project }) {
         flex-col
         overflow-hidden
         rounded-2xl
-        bg-[#FFD3E0]
+        bg-[#FFF4F4]
         p-2
         transition-all
         duration-500
@@ -72,14 +72,16 @@ export default function ProjectCard({ project }) {
             dark:text-gray-300
             lg:text-sm
             "
-            >
+        >
           {project.description}
         </p>
 
         {/* garis pemisah + link */}
         <div className="">
-          <div className="border-t-2 border-[#FF9FBF] dark:border-pink-400/40">
-            <Button href="#" variant="link" size="md" arrow>See details</Button>
+          <div className="border-t-2 border-[#FFD6E0] dark:border-pink-400/40">
+            <Button href="#" variant="link" size="md" arrow>
+              See details
+            </Button>
           </div>
         </div>
       </div>

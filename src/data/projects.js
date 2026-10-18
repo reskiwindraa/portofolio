@@ -1,8 +1,40 @@
-import pillarsImage from "../assets/project-pillars.png";
-import sapaImage from "../assets/project-sapa.png";
-import designSystemImage from "../assets/project-design-system.png";
+import pillarsImage from "../assets/project/project-pillars.png";
+import sapaImage from "../assets/project/project-sapa.png";
+import designSystemImage from "../assets/project/project-design-system.png";
+import bsbMobileImage from "../assets/project/project-bsb-mobile.png";
+import backofficeSapa from "../assets/project/project-backoffice-sapa.png";
 
 export const projects = [
+  {
+    id: "bsb-mobile",
+    title: "BSB Mobile App",
+    description: "A mobile application for managing banking services on the go.",
+    image: bsbMobileImage,
+
+    theme: {
+      light: {
+        background: "#FFD1DB",
+        accent: "#F35C7D",
+      },
+
+      dark: {
+        background: "#482630",
+        accent: "#FF91AA",
+      },
+    },
+
+    items: [
+      "Color tokens",
+      "Typography",
+      "Buttons & components",
+      "Input states",
+      "Spacing system",
+      "Design guidelines",
+    ],
+
+    href: "#",
+  },
+
   {
     id: "pillars",
     title: "Pilllars Web Design",
@@ -18,37 +50,6 @@ export const projects = [
       dark: {
         background: "#29234A",
         accent: "#B8AAFF",
-      },
-    },
-
-    items: [
-      "Customer rating flow",
-      "CS / Teller / Security assessment",
-      "Branch management",
-      "Staff schedule integration",
-      "Feedback & suggestions",
-      "Analytics dashboard",
-    ],
-
-    href: "#",
-  },
-
-  {
-    id: "bsb-sapa",
-    title: "BSB SAPA",
-    description:
-      "A digital customer satisfaction platform designed to collect and manage feedback across branch services.",
-    image: sapaImage,
-
-    theme: {
-      light: {
-        background: "#FFF08B",
-        accent: "#A89400",
-      },
-
-      dark: {
-        background: "#454019",
-        accent: "#F5DF65",
       },
     },
 
@@ -93,4 +94,70 @@ export const projects = [
 
     href: "#",
   },
+
+  {
+    id: "bsb-sapa",
+    title: "BSB SAPA",
+    description:
+      "A digital customer satisfaction platform designed to collect and manage feedback across branch services.",
+    image: sapaImage,
+
+    theme: {
+      light: {
+        background: "#FFF08B",
+        accent: "#A89400",
+      },
+
+      dark: {
+        background: "#454019",
+        accent: "#F5DF65",
+      },
+    },
+
+    items: [
+      "Customer rating flow",
+      "CS / Teller / Security assessment",
+      "Branch management",
+      "Staff schedule integration",
+      "Feedback & suggestions",
+      "Analytics dashboard",
+    ],
+
+    href: "#",
+  },
+
+  {
+    id: "backoffice-sapa",
+    title: "BSB SAPA",
+    description:
+      "A digital customer satisfaction platform designed to collect and manage feedback across branch services.",
+    image: backofficeSapa,
+
+    theme: {
+      light: {
+        background: "#FFF08B",
+        accent: "#A89400",
+      },
+
+      dark: {
+        background: "#454019",
+        accent: "#F5DF65",
+      },
+    },
+
+    items: [
+      "Customer rating flow",
+      "CS / Teller / Security assessment",
+      "Branch management",
+      "Staff schedule integration",
+      "Feedback & suggestions",
+      "Analytics dashboard",
+    ],
+
+    href: "#",
+  },
+
+  
+
+  
 ];

@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import ScrollReveal from "../../components/common/ScrollReveal";
+import Button from "../../components/common/Button";
 
 export default function About() {
   return (
@@ -39,33 +40,15 @@ export default function About() {
             Info
           </h2>
 
-          <a
-            href="#"
-            className="
-              group
-              mt-8
-              inline-flex
-              items-center
-              gap-3
-              text-[16px]
-              font-semibold
-              text-blue-500
-              transition-colors
-              duration-300
-              hover:text-blue-600
-            "
+          <Button
+            href="/assets/proyek/public/resume.pdf"
+            variant="link"
+            size="md"
+            arrow
+            download="Resume-Reski-Windradiaksa.pdf"
           >
             See my resume
-
-            <ArrowRight
-              size={20}
-              className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-              "
-            />
-          </a>
+          </Button>
         </div>
       </ScrollReveal>
 

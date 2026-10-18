@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 
 export default function ScrollReveal({
@@ -9,55 +10,51 @@ export default function ScrollReveal({
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const element = ref.current;
+  
+useEffect(() => {
+  const element = ref.current;
 
-    if (!element) return;
+  if (!element) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(element);
-        }
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -60px 0px",
-      }
-    );
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setVisible(entry.isIntersecting);
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px",
+    }
+  );
 
-    observer.observe(element);
+  observer.observe(element);
 
-    return () => observer.disconnect();
-  }, []);
+  return () => observer.disconnect();
+}, []);
 
-  const directionClass = {
-    up: "translate-y-10",
-    down: "-translate-y-10",
-    left: "translate-x-10",
-    right: "-translate-x-10",
-    scale: "scale-90",
+  const initialTransform = {
+    up: "translate3d(0, 40px, 0)",
+    down: "translate3d(0, -40px, 0)",
+    left: "translate3d(40px, 0, 0)",
+    right: "translate3d(-40px, 0, 0)",
+    scale: "scale(0.9)",
   };
 
   return (
     <div
       ref={ref}
+      className={className}
       style={{
+        opacity: visible ? 1 : 0,
+        transform: visible
+          ? "translate3d(0, 0, 0) scale(1)"
+          : initialTransform[direction] || initialTransform.up,
+        transitionProperty: "opacity, transform",
+        transitionDuration: "700ms",
+        transitionTimingFunction:
+          "cubic-bezier(0.22, 1, 0.36, 1)",
         transitionDelay: `${delay}ms`,
+        willChange: visible ? "auto" : "opacity, transform",
       }}
-      className={`
-        transform-gpu
-        transition-all
-        duration-700
-        ease-[cubic-bezier(0.22,1,0.36,1)]
-        ${
-          visible
-            ? "translate-x-0 translate-y-0 scale-100 opacity-100"
-            : `opacity-0 ${directionClass[direction]}`
-        }
-        ${className}
-      `}
     >
       {children}
     </div>

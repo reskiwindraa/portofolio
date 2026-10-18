@@ -1,13 +1,12 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 import Hero from "./sections/hero/Hero";
 import About from "./sections/about/About";
 import Services from "./sections/services/Services";
 import Work from "./sections/work/Work";
-import CTA from "./components/ui/CTA";
 
-import { useDarkMode } from "./hook/useDarkMode";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 export default function App() {
   const {
@@ -27,7 +26,6 @@ export default function App() {
         <About />
         <Services />
         <Work darkMode={darkMode} />
-        <CTA />
       </main>
 
       <Footer />
