@@ -97,7 +97,7 @@ export default function About() {
             </h2>
 
             <Button
-              href="/assets/proyek/public/resume.pdf"
+              href="/assets/resume.pdf"
               variant="pink"
               size="sm"
               arrow
