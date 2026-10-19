@@ -30,7 +30,7 @@ export default function Work() {
         </h2>
       </ScrollReveal>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:gap-9">
+      <div className="grid md:grid-cols-2 w-full h-full ">
         {projects.map((project, index) => (
           <ScrollReveal
             key={project.id}
