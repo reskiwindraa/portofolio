@@ -5,26 +5,26 @@ import bsbMobileImage from "../assets/project/project-bsb-mobile.png";
 import backofficeSapa from "../assets/project/project-backoffice-sapa.png";
 
 export const projects = [
-  {
-    id: "bsb-mobile",
-    title: "BSB Mobile App",
-    description: "A mobile application for managing banking services on the go.",
-    image: bsbMobileImage,
+  // {
+  //   id: "bsb-mobile",
+  //   title: "BSB Mobile App",
+  //   description: "A mobile application for managing banking services on the go.",
+  //   image: bsbMobileImage,
 
-    theme: {
-      light: {
-        background: "#FFD1DB",
-        accent: "#F35C7D",
-      },
+  //   theme: {
+  //     light: {
+  //       background: "#FFD1DB",
+  //       accent: "#F35C7D",
+  //     },
 
-      dark: {
-        background: "#482630",
-        accent: "#FF91AA",
-      },
-    },
+  //     dark: {
+  //       background: "#482630",
+  //       accent: "#FF91AA",
+  //     },
+  //   },
 
-    href: "/project-ongoing",
-  },
+  //   href: "/project-ongoing",
+  // },
 
   {
     id: "pillars",
